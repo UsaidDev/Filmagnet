@@ -1,0 +1,26 @@
+.banner{
+    background-image: url('../../Image/Banner.png');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    color: white;
+    
+}
+.banner-items{
+    justify-content: start;
+    text-align: center;
+    width: 30%;
+    padding-top: 120px;
+}
+
+@media only screen and (max-width: 800px){
+    .banner-items{
+        width: 70%;
+        text-align: center;
+        color: red;
+    }
+    .banner-items button{
+        padding: 10px;
+    }
+}
