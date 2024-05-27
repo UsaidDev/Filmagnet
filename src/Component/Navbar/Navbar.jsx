@@ -9,8 +9,8 @@ function Navbar() {
         <h2 className='logo'><img src={Logo} alt="Logo" />Filmagnet</h2>
         <ul className='desktop-list'>
           <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
+          <li>Movie</li>
+          <li>Tv Show</li>
           <li className='Signin'>Sign in</li>
         </ul>
         <ul className="mobile-list">

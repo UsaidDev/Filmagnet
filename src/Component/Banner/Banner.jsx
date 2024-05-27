@@ -7,12 +7,16 @@ function Banner() {
     <div className="banner">
       <div className="banner-items">
         <h2>Filmagnet</h2>
-        <button>Click me</button>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit sunt alias officiis mollitia fugit debitis obcaecati sed cumque dolor nihil. Maxime, quis laboriosam exercitationem quibusdam nostrum repellendus quae harum ab!</p>
+        <h3>Unlimited <span>Entertainment,</span><br />
+        Movies, TVs shows, & More.
+        </h3>
+        <button>Play Now</button>
       </div>
     </div>
+    <div className="Movies-list">
+      
+    </div>
     </>
-
   )
 }
 export default Banner;

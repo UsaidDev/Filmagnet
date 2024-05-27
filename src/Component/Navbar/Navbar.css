@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-* {
+
+*{
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -7,39 +8,39 @@
     text-decoration: none;
     list-style: none;
 }
-.navbar{
+.navbar {
     display: flex;
     padding: 10px 20px;
     width: 100%;
     align-items: center;
     background-color: #1E1E1E;
 }
-.navbar ul{
+.navbar ul {
     flex: 1;
     text-align: right;
 }
-.navbar ul li{
+.navbar ul li {
     display: inline-block;
-    margin:1 20px;
+    margin: 1 20px;
     color: #fff;
 }
-.logo img{
+.logo img {
     height: 30px;
 }
-.navbar ul li{
+.navbar ul li {
     display: inline-block;
-    margin:0 20px;
+    margin: 0 20px;
     font-size: 18px;
 }
-.logo{
+.logo {
     font-size: 30px;
     color: #fff;
 }
-.mobile-list{
+.mobile-list {
     display: none;
 }
-.Signin{
-    background-color: none;
+.Signin {
+    background-color: transparent;
     border: 2px yellow solid;
     color: black;
     margin: 4px;
@@ -48,12 +49,12 @@
     font-size: 10px;
     font-size: 18px !important;
 }
-@media only screen and (max-width: 800px){
-    .navbar .desktop-list{
+@media only screen and (max-width: 800px) {
+    .navbar .desktop-list {
         display: none;
         background-color: #1E1E1E;
     }
-    .mobile-list{
+    .mobile-list {
         display: block;
         position: fixed;
         bottom: 0;
@@ -65,11 +66,11 @@
         padding: 10px;
         background-color: #1E1E1E;
     }
-    .mobile-list i{
+    .mobile-list i {
         font-size: 25px;
         transition: 0.5s;
     }
-    .mobile-list i:hover{
-       color:#fff;
+    .mobile-list i:hover {
+        color: #fff;
     }
 }
