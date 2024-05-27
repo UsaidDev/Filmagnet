@@ -29,11 +29,21 @@
     width: 20%;
 }
 .Movies-list{
-    background-image: url('../../Image/Movie_list_Background.svg');
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 700px;
+    height: 400px;
+    background-color: #141414;
+}
+.Movies-heading{
+    width: 60%;
+    padding: 40px;
+}
+.Movies-heading h5{
+    color: #B0DC00;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.Movies-heading h4{
+    color: #fff;
+    font-size: 35px;
 }
 @media only screen and (max-width: 576px) {
     .banner-items {
@@ -49,5 +59,11 @@
         margin-bottom: 10px;
         margin-top: 10px;
         width: 30%;
+    }
+    .Movies-heading{
+        width: 100%;
+    }
+    .Movies-heading h4{
+        font-size: 30px;
     }
 }
