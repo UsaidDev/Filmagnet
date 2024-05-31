@@ -6,23 +6,23 @@ import Movie_3 from '../../Image/Movies_list/Movie-3.png'
 import Movie_4 from '../../Image/Movies_list/Movie-4.png'
 
 import axios from '../../Constants/Axios'
-import {API_KEY,ImageUrl} from '../../Constants/Constants'
+import { API_KEY, ImageUrl } from '../../Constants/Constants'
 
 import Posters from '../Posters/Posters'
 
 function Banner() {
-  const [movie,SetMovie]=useState([])
+  const [movie, SetMovie] = useState([])
   useEffect(() => {
-    axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response)=>{
-      console.log(response.data.results[0])
+    axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
       SetMovie(response.data.results[5])
-    }).catch((err)=>{
+    }).catch((err) => {
       console.log(err)
     })
   }, [])
+
   return (
     <>
-      <div style={{backgroundImage:`url(${movie ? ImageUrl+movie.backdrop_path:""})`}} className="banner">
+      <div style={{ backgroundImage: `url(${movie ? ImageUrl + movie.backdrop_path : ""})` }} className="banner">
         <div className="banner-items">
           <h2>Filmagnet</h2>
           <h3>Unlimited <span>Entertainment,</span><br />
@@ -37,12 +37,12 @@ function Banner() {
           <h5>ONLINE STREAMING</h5>
           <h4>Upcoming Movies</h4>
         </div>
-        
+
         <div className="card-container">
           <div className="card">
             <img src={Movie_1} alt="Card-1" />
             <div className="card-content">
-              <h4>{movie ? movie.title :""}</h4>
+              <h4>{movie ? movie.title : ""}</h4>
               <p>2023</p>
               <span>HD</span>
             </div>
