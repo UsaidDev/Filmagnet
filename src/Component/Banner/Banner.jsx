@@ -7,19 +7,18 @@ import Movie_4 from '../../Image/Movies_list/Movie-4.png'
 
 import axios from '../../Constants/Axios'
 import { API_KEY, ImageUrl } from '../../Constants/Constants'
-
 import Posters from '../Posters/Posters'
+import { comedy } from '../Url/Url'
 
-function Banner() {
+function Banner(props) {
   const [movie, SetMovie] = useState([])
   useEffect(() => {
     axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
       SetMovie(response.data.results[5])
     }).catch((err) => {
-      console.log(err)
+      alert(err)
     })
   }, [])
-
   return (
     <>
       <div style={{ backgroundImage: `url(${movie ? ImageUrl + movie.backdrop_path : ""})` }} className="banner">
@@ -31,7 +30,6 @@ function Banner() {
           <button>Play Now</button>
         </div>
       </div>
-
       <div className="Movies-list">
         <div className="Movies-heading">
           <h5>ONLINE STREAMING</h5>
@@ -75,9 +73,8 @@ function Banner() {
             </div>
           </div>
         </div>
-
-        <h2 className='title'>Title</h2>
-        <Posters />
+        <h2 className='title'>{props.title}</h2>
+        <Posters url={comedy} title_cmd={"Filmagnet Comedy"}/>
       </div>
     </>
   )
