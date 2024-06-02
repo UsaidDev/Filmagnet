@@ -108,10 +108,13 @@
     display: flex;
     overflow-x: scroll;
 }
-.title {
-    color: wheat;
+.title{
+    color: #fff;
     margin-left: 20px;
-
+}
+.shot_title{
+    color: #B0DC00;
+    margin-left: 20px;
 }
 @media only screen and (max-width: 576px) {
 

@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Banner title={"Filmagnet Comedy"} />
+      <Banner title={"Filmagnet Comedy"} shot_title="Click to See!!" />
     </div>
   )
 }

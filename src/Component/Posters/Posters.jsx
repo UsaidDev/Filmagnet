@@ -42,7 +42,7 @@ function Posters(props) {
                         <img src={`${ImageUrl}${obj.backdrop_path}`} alt="Posters_Logos" onClick={() => handleMovies(obj.id)} />
                     )}
                 </div>
-                {UrlId && <YouTube opts={opts} videoId={UrlId.key} />}
+                {UrlId && <YouTube opts={opts} videoId={UrlId.key} className='video_player'/>}
             </div>
         </div>
     )

@@ -4,7 +4,6 @@ import Movie_1 from '../../Image/Movies_list/Movie-1.png'
 import Movie_2 from '../../Image/Movies_list/Movie-2.png'
 import Movie_3 from '../../Image/Movies_list/Movie-3.png'
 import Movie_4 from '../../Image/Movies_list/Movie-4.png'
-
 import axios from '../../Constants/Axios'
 import { API_KEY, ImageUrl } from '../../Constants/Constants'
 import Posters from '../Posters/Posters'
@@ -74,7 +73,8 @@ function Banner(props) {
           </div>
         </div>
         <h2 className='title'>{props.title}</h2>
-        <Posters url={comedy} title_cmd={"Filmagnet Comedy"}/>
+        <p className='shot_title'>{props.shot_title}</p>
+        <Posters url={comedy} title_cmd={"Filmagnet Comedy"} />
       </div>
     </>
   )
