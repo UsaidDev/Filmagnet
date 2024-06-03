@@ -1,27 +1,39 @@
-.posters {
+.trending {
     overflow: hidden;
     padding: 60px 0 0 0;
     position: relative;
     white-space: nowrap;
 }
 
-.Posters_Logos {
-    animation: 200s slide infinite linear;
+.trending h2 {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.trending p {
+    color: #B0DC00;
+    margin-left: 20px;
+    margin-bottom: 4%;
+}
+
+.trending_Logos {
+    animation: 5s slide infinite linear;
     display: inline-block;
 }
 
-.Posters_Logos img {
-    height: 350px;
+.trending_Logos img {
+    height: 260px;
     margin: 0 20px;
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
-.posters:hover .Posters_Logos {
+.trending:hover .trending_Logos {
     animation-play-state: paused;
 }
 
-.posters:before {
+.trending:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,9 +59,15 @@
 }
 
 @media only screen and (max-width: 576px) {
-    .Posters_Logos img {
+    .trending_Logos img {
         height: 250px;
         margin: 0 20px;
-        margin-bottom: 10px;
+        width: 300px;
+        margin-bottom: 60px;
+    }
+
+    .trending_Logos {
+        animation: 5s slide infinite linear;
+        display: inline-block;
     }
 }

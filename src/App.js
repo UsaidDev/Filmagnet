@@ -7,6 +7,7 @@ function App() {
     <div>
       <Navbar />
       <Banner title={"Filmagnet Comedy"} shot_title="Click to See!!" />
+      
     </div>
   )
 }

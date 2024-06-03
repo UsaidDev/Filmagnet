@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Banner.css'
-import Movie_1 from '../../Image/Movies_list/Movie-1.png'
 import Movie_2 from '../../Image/Movies_list/Movie-2.png'
 import Movie_3 from '../../Image/Movies_list/Movie-3.png'
 import Movie_4 from '../../Image/Movies_list/Movie-4.png'
@@ -10,14 +9,14 @@ import Posters from '../Posters/Posters'
 import { comedy } from '../Url/Url'
 
 function Banner(props) {
-  const [movie, SetMovie] = useState([])
+  const [movie, SetMovie] = useState([]);
   useEffect(() => {
     axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
-      SetMovie(response.data.results[18])
+      SetMovie(response.data.results[18]);
     }).catch((err) => {
       alert(err)
     })
-  }, [])
+  }, []);
   return (
     <>
       <div style={{ backgroundImage: `url(${movie ? ImageUrl + movie.backdrop_path : ""})` }} className="banner">
@@ -34,17 +33,7 @@ function Banner(props) {
           <h5>ONLINE STREAMING</h5>
           <h4>Upcoming Movies</h4>
         </div>
-
         <div className="card-container">
-          <div className="card">
-            <img src={Movie_1} alt="Card-1" />
-            <div className="card-content">
-              <h4>{movie ? movie.title : ""}</h4>
-              <p>2023</p>
-              <span>HD</span>
-            </div>
-          </div>
-
           <div className="card">
             <img src={Movie_2} alt="Card-2" />
             <div className="card-content">
@@ -53,7 +42,6 @@ function Banner(props) {
               <span>HD</span>
             </div>
           </div>
-
           <div className="card">
             <img src={Movie_3} alt="Card-3" />
             <div className="card-content">
@@ -62,7 +50,6 @@ function Banner(props) {
               <span>HD</span>
             </div>
           </div>
-
           <div className="card">
             <img src={Movie_4} alt="Card-4" />
             <div className="card-content">

@@ -3,10 +3,11 @@ import './Posters.css'
 import axios from '../../Constants/Axios'
 import { ImageUrl, API_KEY } from '../../Constants/Constants'
 import YouTube from 'react-youtube'
+import Trending from '../Trending/Trending'
 
 function Posters(props) {
     const [movies, SetMovies] = useState([]);
-    const [UrlId, SetUrlId] = useState('')
+    const [UrlId, SetUrlId] = useState('');
     useEffect(() => {
         axios.get(props.url).then((response) => {
             SetMovies(response.data.results)
@@ -31,20 +32,21 @@ function Posters(props) {
                 console.log('Array empty')
             }
         }).catch((err) => {
-            console.log(err)
+            console.log(err);
         })
     }
     return (
         <div>
             <div className="posters">
-                <div className={props.Small ? 'Small_Image' : 'Posters_Logos'}>
-                    {movies.map((obj) =>
-                        <img src={`${ImageUrl}${obj.backdrop_path}`} alt="Posters_Logos" onClick={() => handleMovies(obj.id)} />
-                    )}
-                </div>
-                {UrlId && <YouTube opts={opts} videoId={UrlId.key} className='video_player'/>}
+                {movies.map((obj) =>
+                    <div className='Posters_Logos' key={obj.id}>
+                        <img src={`${ImageUrl}${obj.backdrop_path}`} alt="Posters_Logos" clas onClick={() => handleMovies(obj.id)} />
+                    </div>
+                )}
+                {UrlId && <YouTube opts={opts} videoId={UrlId.key} className='video_player' />}
             </div>
+            <Trending />
         </div>
     )
-}
+};
 export default Posters;
