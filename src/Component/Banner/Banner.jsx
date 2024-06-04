@@ -7,18 +7,20 @@ import axios from '../../Constants/Axios'
 import { API_KEY, ImageUrl } from '../../Constants/Constants'
 import Posters from '../Posters/Posters'
 import { comedy } from '../Url/Url'
+import Navbar from '../Navbar/Navbar'
 
 function Banner(props) {
   const [movie, SetMovie] = useState([]);
   useEffect(() => {
     axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
-      SetMovie(response.data.results[18]);
+      SetMovie(response.data.results[17]);
     }).catch((err) => {
       alert(err)
     })
   }, []);
   return (
     <>
+    <Navbar />
       <div style={{ backgroundImage: `url(${movie ? ImageUrl + movie.backdrop_path : ""})` }} className="banner">
         <div className="banner-items">
           <h2>Filmagnet</h2>

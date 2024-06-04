@@ -6,7 +6,7 @@
 }
 
 .Posters_Logos {
-    animation: 200s slide infinite linear;
+    animation: 35s slide infinite linear;
     display: inline-block;
 }
 
@@ -46,10 +46,15 @@
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media(max-width: 576px) {
     .Posters_Logos img {
         height: 250px;
         margin: 0 20px;
         margin-bottom: 10px;
     }
+    .Posters_Logos {
+        animation: 40s slide infinite linear;
+        display: inline-block;
+    }
+    
 }

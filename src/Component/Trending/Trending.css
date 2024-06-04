@@ -1,73 +1,35 @@
-.trending {
+.trending{
     overflow: hidden;
-    padding: 60px 0 0 0;
-    position: relative;
+    padding: 60px 0;
     white-space: nowrap;
 }
-
-.trending h2 {
-    color: #fff;
-    margin-left: 20px;
-    font-size: 30px;
-}
-
-.trending p {
-    color: #B0DC00;
-    margin-left: 20px;
-    margin-bottom: 4%;
-}
-
-.trending_Logos {
-    animation: 5s slide infinite linear;
+.trending_Logos{
     display: inline-block;
+    animation:40s slide infinite;
+    margin-top: 20px;
 }
-
-.trending_Logos img {
-    height: 260px;
-    margin: 0 20px;
-    margin-bottom: 20px;
+.trending_Logos img{
+    height:200px;
+    margin: 0 15px;
     border-radius: 10px;
 }
-
-.trending:hover .trending_Logos {
-    animation-play-state: paused;
+.trending:hover .trending_Logos{
+    animation-play-state:paused ;
+}
+.tlt-trending{
+    color: white;
+    margin-left: 15px;
 }
 
-.trending:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200px;
+.para-trending{
+    color:#B0DC00;
+    margin-left: 15px;
 }
-
-.Small_Image img {
-    height: 250px;
-    margin: 0 20px;
-    width: 280px;
-    border-radius: 10px;
-}
-
-@keyframes slide {
-    from {
-        transform: (translateX(0));
+@keyframes slide{
+    from{
+        transform: translateX(0);
     }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    .trending_Logos img {
-        height: 250px;
-        margin: 0 20px;
-        width: 300px;
-        margin-bottom: 60px;
-    }
-
-    .trending_Logos {
-        animation: 5s slide infinite linear;
-        display: inline-block;
+    to{
+        transform: translateX(-1000%);
     }
 }

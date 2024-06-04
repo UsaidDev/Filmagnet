@@ -1,13 +1,14 @@
 import React from 'react'
-import Navbar from './Component/Navbar/Navbar'
 import Banner from './Component/Banner/Banner'
-
+import { Routes, Route } from 'react-router-dom'
+import Detail from './Component/DetailPage/Details'
 function App() {
   return (
     <div>
-      <Navbar />
-      <Banner title={"Filmagnet Comedy"} shot_title="Click to See!!" />
-      
+      <Routes>
+        <Route path='/' element={<Banner title={"Filmagnet Comedy"} shot_title="Click to See!!" />} />
+        <Route path='/deatils' element={<Detail  />} />
+      </Routes>
     </div>
   )
 }
