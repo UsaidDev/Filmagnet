@@ -1,11 +1,51 @@
-.Detail_Page{
-    margin-top: 20px;
+section {
+  text-align: center;
+  margin: 20px; 
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  margin-top: 60px;
+  justify-content: center;
 }
-.Detail_Page h2{
-    color: whitesmoke;
-    margin: 0 15px;
-    font-size: 22px;
+
+section img {
+  max-width: 100%; 
+  height: 300px;
+  border-radius: 10px;
 }
-.Detail_Page img{
-    height: 100px;
+
+#ctn {
+  max-width: 600px; 
+  margin:10px auto; 
+  text-align: left;
+  font-size: 1.3rem; 
+  line-height: 1.5; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  white-space: normal; 
+}
+.movie_name{
+  font-size: 1.5rem;
+  color: gold;
+}
+.movie_para{
+  font-size: 1rem;
+  color: white;
+}
+.movie_release_data{
+  font-size: 1.3rem;
+  background-color: gold;
+  width:fit-content;
+}
+@media(max-width:576px){
+  section{
+    display: block;
+    padding-bottom: 50px;
+  }
+  .movie_release_data{
+    font-size: 1.3rem;
+    background-color: gold;
+    width:fit-content;
+  }
 }

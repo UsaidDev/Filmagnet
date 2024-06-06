@@ -1,6 +1,6 @@
 .trending{
-    overflow: hidden;
     padding: 60px 0;
+    overflow: hidden;
     white-space: nowrap;
 }
 .trending_Logos{
@@ -30,6 +30,6 @@
         transform: translateX(0);
     }
     to{
-        transform: translateX(-1000%);
+        transform: translateX(-1500%);
     }
 }
