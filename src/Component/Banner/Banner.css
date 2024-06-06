@@ -146,7 +146,7 @@
         margin-bottom: 30px;
     }
     .Movies-list {
-        height: 2900px;
+        height: auto;
         background-color: #141414;
     }
 }
