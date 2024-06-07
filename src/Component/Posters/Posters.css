@@ -4,23 +4,19 @@
     position: relative;
     white-space: nowrap;
 }
-
 .Posters_Logos {
     animation: 35s slide infinite linear;
     display: inline-block;
 }
-
 .Posters_Logos img {
     height: 350px;
     margin: 0 20px;
     margin-bottom: 20px;
     border-radius: 10px;
 }
-
 .posters:hover .Posters_Logos {
     animation-play-state: paused;
 }
-
 .posters:before {
     position: absolute;
     top: 0;
@@ -28,14 +24,12 @@
     height: 100%;
     width: 200px;
 }
-
 .Small_Image img {
     height: 250px;
     margin: 0 20px;
     width: 280px;
     border-radius: 10px;
 }
-
 @keyframes slide {
     from {
         transform: (translateX(0));
@@ -45,7 +39,6 @@
         transform: translateX(-100%);
     }
 }
-
 @media(max-width: 576px) {
     .Posters_Logos img {
         height: 250px;

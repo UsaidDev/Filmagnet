@@ -13,14 +13,14 @@ function Banner(props) {
   const [movie, SetMovie] = useState([]);
   useEffect(() => {
     axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
-      SetMovie(response.data.results[17]);
+      SetMovie(response.data.results[15]);
     }).catch((err) => {
       alert(err)
     })
   }, []);
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div style={{ backgroundImage: `url(${movie ? ImageUrl + movie.backdrop_path : ""})` }} className="banner">
         <div className="banner-items">
           <h2>Filmagnet</h2>
