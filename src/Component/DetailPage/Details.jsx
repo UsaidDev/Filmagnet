@@ -17,22 +17,22 @@ function Detail(props) {
     }, [itemsId]);
     return (
         <>
-                {
-                    idMovie.map((movie) => {
-                        return (
-                            <>
+            {
+                idMovie.map((movie) => {
+                    return (
+                        <>
                             <section >
                                 <img src={`${ImageUrl}${movie.backdrop_path}`} alt="" />
                                 <article id='ctn'>
-                                <h1 className='movie_name'>{movie.title}</h1>
+                                    <h1 className='movie_name'>{movie.title}</h1>
                                     <p className='movie_para'>{movie.overview}</p>
                                     <h3 className='movie_release_data'>Release Date: {movie.release_date}</h3>
                                 </article>
-                                </section>
-                            </>
-                        )
-                    })
-                }
+                            </section>
+                        </>
+                    )
+                })
+            }
         </>
     );
 }
